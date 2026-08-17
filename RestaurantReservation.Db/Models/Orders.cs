@@ -7,7 +7,7 @@ public class Orders
     public int EmployeeId {get; set;}
     public DateTime OrderDate {get; set;}
     public decimal TotalAmount {get; set;}
-    public Reservations Reservations { get; set; } = null!;
-    public Employees Employees { get; set; } = null!;
+    public Reservations Reservation { get; set; } = null!;
+    public Employees Employee { get; set; } = null!;
     public ICollection<OrderItems> OrderItems { get; set; } = new List<OrderItems>();
 }

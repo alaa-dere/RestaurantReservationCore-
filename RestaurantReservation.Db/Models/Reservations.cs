@@ -8,8 +8,8 @@ public class Reservations
     public int TableId {get; set;}
     public DateTime ReservationDate {get; set;}
     public int PartySize {get; set;}
-    public Customers Customers { get; set; } = null!;
-    public Restaurants Restaurants { get; set; } = null!;
-    public Tables Tables { get; set; } = null!;
+    public Customers Customer { get; set; } = null!;
+    public Restaurants Restaurant { get; set; } = null!;
+    public Tables Table { get; set; } = null!;
     public ICollection<Orders> Orders { get; set; } = new List<Orders>();
 }

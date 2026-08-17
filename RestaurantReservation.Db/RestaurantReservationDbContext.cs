@@ -35,43 +35,43 @@ public class RestaurantReservationDbContext : DbContext
         modelBuilder.Entity<Restaurants>().HasKey(r => r.RestaurantId);
         modelBuilder.Entity<MenuItems>().HasKey(mi => mi.ItemId);
         
-        // modelBuilder.Entity<Reservations>()
-        //     .HasOne(r => r.Customers)
-        //     .WithMany(c => c.Reservations)
-        //     .HasForeignKey(r => r.CustomerId)
-        //     .OnDelete(DeleteBehavior.Restrict);
+        modelBuilder.Entity<Reservations>()
+            .HasOne(r => r.Customer)
+            .WithMany(c => c.Reservations)
+            .HasForeignKey(r => r.CustomerId)
+            .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Employees>()
-            .HasOne(e => e.Restaurants)
+            .HasOne(e => e.Restaurant)
             .WithMany(r => r.Employees)
-            .HasForeignKey(r => r.RestaurantId)
+            .HasForeignKey(e => e.RestaurantId)
             .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Tables>()
-            .HasOne(t => t.Restaurants)
+            .HasOne(t => t.Restaurant)
             .WithMany(r => r.Tables)
-            .HasForeignKey(r => r.RestaurantId)
+            .HasForeignKey(t => t.RestaurantId)
             .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<MenuItems>()
-            .HasOne(mi => mi.Restaurants)
+            .HasOne(mi => mi.Restaurant)
             .WithMany(r => r.MenuItems)
             .HasForeignKey(mi => mi.RestaurantId)
             .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Reservations>()
-            .HasOne(r => r.Tables)
+            .HasOne(r => r.Table)
             .WithMany(r => r.Reservations)
             .HasForeignKey(r => r.TableId)
             .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Reservations>()
-            .HasOne(r => r.Restaurants)
+            .HasOne(r => r.Restaurant)
             .WithMany(r => r.Reservations)
             .HasForeignKey(r => r.RestaurantId)
             .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Orders>()
-            .HasOne(o => o.Reservations)
+            .HasOne(o => o.Reservation)
             .WithMany(r => r.Orders)
             .HasForeignKey(o => o.ReservationId)
             .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Orders>()
-            .HasOne(o => o.Employees)
+            .HasOne(o => o.Employee)
             .WithMany(r => r.Orders)
             .HasForeignKey(o => o.EmployeeId)
             .OnDelete(DeleteBehavior.Restrict);
