@@ -35,11 +35,11 @@ public class RestaurantReservationDbContext : DbContext
         modelBuilder.Entity<Restaurants>().HasKey(r => r.RestaurantId);
         modelBuilder.Entity<MenuItems>().HasKey(mi => mi.ItemId);
         
-        modelBuilder.Entity<Reservations>()
-            .HasOne(r => r.Customers)
-            .WithMany(c => c.Reservations)
-            .HasForeignKey(r => r.CustomerId)
-            .OnDelete(DeleteBehavior.Restrict);
+        // modelBuilder.Entity<Reservations>()
+        //     .HasOne(r => r.Customers)
+        //     .WithMany(c => c.Reservations)
+        //     .HasForeignKey(r => r.CustomerId)
+        //     .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Employees>()
             .HasOne(e => e.Restaurants)
             .WithMany(r => r.Employees)
@@ -51,7 +51,7 @@ public class RestaurantReservationDbContext : DbContext
             .HasForeignKey(r => r.RestaurantId)
             .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<MenuItems>()
-            .HasOne(mi => mi.Restaurant)
+            .HasOne(mi => mi.Restaurants)
             .WithMany(r => r.MenuItems)
             .HasForeignKey(mi => mi.RestaurantId)
             .OnDelete(DeleteBehavior.Restrict);
@@ -59,6 +59,11 @@ public class RestaurantReservationDbContext : DbContext
             .HasOne(r => r.Tables)
             .WithMany(r => r.Reservations)
             .HasForeignKey(r => r.TableId)
+            .OnDelete(DeleteBehavior.Restrict);
+        modelBuilder.Entity<Reservations>()
+            .HasOne(r => r.Restaurants)
+            .WithMany(r => r.Reservations)
+            .HasForeignKey(r => r.RestaurantId)
             .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Orders>()
             .HasOne(o => o.Reservations)
