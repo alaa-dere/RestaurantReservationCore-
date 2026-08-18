@@ -1,3 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using RestaurantReservation.Db;
+using RestaurantReservation.Db.Data;
 
-Console.WriteLine("Hello, World!");
+using var context = new RestaurantReservationDbContext();
+
+await DataSeeder.SeedAsync(context);
+
+Console.WriteLine("Database seeded successfully.");
