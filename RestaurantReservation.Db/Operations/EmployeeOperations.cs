@@ -55,4 +55,9 @@ public class EmployeeOperations
             .Where(e => e.Position == "Manager")
             .ToListAsync();
     }
+    
+    public async Task<List<EmployeeRestaurantView>> GetEmployeesWithRestaurantAsync()
+    {
+        return await _context.EmployeeRestaurantView.ToListAsync();
+    }
 }

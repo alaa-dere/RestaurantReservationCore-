@@ -13,6 +13,8 @@ public class RestaurantReservationDbContext : DbContext
     public DbSet<OrderItems> OrderItems { get; set; }
     public DbSet<Restaurants> Restaurants { get; set; }
     public DbSet<Employees> Employees { get; set; }
+    public DbSet<ReservationDetailsView> ReservationDetailsView { get; set; }
+    public DbSet<EmployeeRestaurantView> EmployeeRestaurantView { get; set; }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -34,6 +36,8 @@ public class RestaurantReservationDbContext : DbContext
         modelBuilder.Entity<OrderItems>().HasKey(o => o.OrderItemId);
         modelBuilder.Entity<Restaurants>().HasKey(r => r.RestaurantId);
         modelBuilder.Entity<MenuItems>().HasKey(mi => mi.ItemId);
+        modelBuilder.Entity<ReservationDetailsView>().HasNoKey().ToView("ReservationDetailsView");
+        modelBuilder.Entity<EmployeeRestaurantView>().HasNoKey().ToView("EmployeeRestaurantView");
         
         modelBuilder.Entity<Reservations>()
             .HasOne(r => r.Customer)

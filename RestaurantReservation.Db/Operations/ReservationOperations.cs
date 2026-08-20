@@ -56,4 +56,9 @@ public class ReservationOperations
             .Where(r => r.CustomerId == customerId)
             .ToListAsync();
     }
+    
+    public async Task<List<ReservationDetailsView>> GetReservationDetailsAsync()
+    {
+        return await _context.ReservationDetailsView.ToListAsync();
+    }
 }

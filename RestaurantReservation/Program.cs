@@ -14,6 +14,8 @@ await TestMenuItemCrudAsync(context);
 await TestReservationCrudAsync(context);
 await TestOrderCrudAsync(context);
 await TestOrderItemCrudAsync(context);
+await TestReservationDetailsViewAsync(context);
+await TestEmployeeRestaurantViewAsync(context);
 
 static async Task TestCustomerCrudAsync(RestaurantReservationDbContext context)
 {
@@ -282,4 +284,40 @@ static async Task TestCalculateAverageOrderAmountAsync(RestaurantReservationDbCo
     var average = await orderOperations.CalculateAverageOrderAmountAsync(1);
 
     Console.WriteLine($"Average order amount for Employee 1: {average:F2}");
+}
+
+static async Task TestReservationDetailsViewAsync(
+    RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Reservation Details View ");
+
+    var operations = new ReservationOperations(context);
+    var reservations = await operations.GetReservationDetailsAsync();
+
+    foreach (var reservation in reservations)
+    {
+        Console.WriteLine(
+            $"Reservation: {reservation.ReservationId}, " +
+            $"Customer: {reservation.CustomerFirstName} {reservation.CustomerLastName}, " +
+            $"Restaurant: {reservation.RestaurantName}"
+        );
+    }
+}
+
+static async Task TestEmployeeRestaurantViewAsync(RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Employees With Restaurant Details ");
+
+    var operations = new EmployeeOperations(context);
+    var employees = await operations.GetEmployeesWithRestaurantAsync();
+
+    foreach (var employee in employees)
+    {
+        Console.WriteLine(
+            $"Employee: {employee.EmployeeId} - " +
+            $"{employee.FirstName} {employee.LastName}, " +
+            $"Position: {employee.Position}, " +
+            $"Restaurant: {employee.RestaurantName}"
+        );
+    }
 }

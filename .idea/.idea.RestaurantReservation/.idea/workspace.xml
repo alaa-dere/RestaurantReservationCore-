@@ -16,10 +16,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c8f0f86c-116e-418e-8261-1060554caef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RestaurantReservation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RestaurantReservation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantReservation.Db/Migrations/RestaurantReservationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation.Db/Migrations/RestaurantReservationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantReservation.Db/Operations/EmployeeOperations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation.Db/Operations/EmployeeOperations.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantReservation.Db/Operations/MenuItemOperations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation.Db/Operations/MenuItemOperations.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantReservation.Db/Operations/OrderOperations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation.Db/Operations/OrderOperations.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantReservation.Db/Operations/ReservationOperations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation.Db/Operations/ReservationOperations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantReservation.Db/RestaurantReservationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation.Db/RestaurantReservationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantReservation/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,10 +51,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Data/DataSeeder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Customers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/EmployeeRestaurantView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Employees.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/MenuItems.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/OrderItems.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Orders.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/ReservationDetailsView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Reservations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Restaurants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Tables.cs" root0="FORCE_HIGHLIGHTING" />
@@ -220,7 +222,7 @@
       <updated>1786865872497</updated>
       <workItem from="1786865874676" duration="446000" />
       <workItem from="1786866342473" duration="26396000" />
-      <workItem from="1787135277878" duration="9280000" />
+      <workItem from="1787135277878" duration="13676000" />
     </task>
     <servers />
   </component>
