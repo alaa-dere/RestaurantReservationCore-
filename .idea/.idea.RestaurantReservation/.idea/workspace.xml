@@ -16,30 +16,35 @@
   <component name="ChangeListManager">
     <list default="true" id="c8f0f86c-116e-418e-8261-1060554caef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RestaurantReservation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RestaurantReservation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantReservation.Db/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation.Db/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantReservation/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantReservation/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="3" />
+    <option name="cachedIndexableFilesCount" value="4" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "alaa-dere"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alaa-dere&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/alaa-dere/RestaurantReservationCore-.git",
-    "accountId": "5457fdfb-e903-48fc-bc2a-5a97bd563a98"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alaa-dere/RestaurantReservationCore-.git&quot;,
+    &quot;accountId&quot;: &quot;5457fdfb-e903-48fc-bc2a-5a97bd563a98&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Data/DataSeeder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Customers.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,6 +55,14 @@
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Reservations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Restaurants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Models/Tables.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Operations/CustomerOperations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Operations/EmployeeOperations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Operations/MenuItemOperations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Operations/OrderItemOperations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Operations/OrderOperations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Operations/ReservationOperations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Operations/RestaurantOperations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Operations/TableOperations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestaurantReservation.Db/RestaurantReservationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -59,61 +72,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5304826146763204E-28" />
-      <entry key="MS500" value="2.7350525818172976E-6" />
-      <entry key="S2" value="0.04066795898782681" />
-      <entry key="S5" value="0.2861944155940401" />
-      <entry key="S10" value="0.7900925619884486" />
-      <entry key="S30" value="4.32395364671361" />
-      <entry key="S60" value="8.118393771565325" />
-      <entry key="M2" value="11.59111861814662" />
-      <entry key="M5" value="15.376823470985306" />
-      <entry key="M10" value="18.556199323785105" />
-      <entry key="M15" value="20.51527551431512" />
-      <entry key="M30" value="23.44141686395992" />
-      <entry key="H1" value="25.474054309388578" />
-      <entry key="H2" value="27.86805943604705" />
-      <entry key="H4" value="39.07110066164528" />
-      <entry key="D1" value="219.1851985694607" />
-      <entry key="W1" value="422.4202310850804" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0" />
+      <entry key="M30" value="1.0000000001786111" />
+      <entry key="H1" value="1.0000830197269233" />
+      <entry key="H2" value="1.0586265139756887" />
+      <entry key="H4" value="2.943972968318761" />
+      <entry key="D1" value="134.92521389717285" />
+      <entry key="W1" value="402.14909246658755" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000000000041388" />
-      <entry key="S2" value="1.0025364035209576" />
-      <entry key="S5" value="1.0915570102714485" />
-      <entry key="S10" value="1.3035304866840183" />
-      <entry key="S30" value="1.7695868617397972" />
-      <entry key="S60" value="2.1327888081757322" />
-      <entry key="M2" value="2.4653117212336553" />
-      <entry key="M5" value="2.8405968866531883" />
-      <entry key="M10" value="3.4594999434158185" />
-      <entry key="M15" value="4.027366496400889" />
-      <entry key="M30" value="5.067202271314587" />
-      <entry key="H1" value="5.888059699630735" />
-      <entry key="H2" value="6.836904235350295" />
-      <entry key="H4" value="11.253149797285824" />
-      <entry key="D1" value="45.853278425560866" />
-      <entry key="W1" value="68.69140134944934" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="1.0567688008047485E-169" />
+      <entry key="M5" value="5.084553995712294E-68" />
+      <entry key="M10" value="4.628443390473916E-34" />
+      <entry key="M15" value="1.0535025031816233E-22" />
+      <entry key="M30" value="2.5916446299434758E-11" />
+      <entry key="H1" value="1.3316062026942159E-5" />
+      <entry key="H2" value="0.010281614092697502" />
+      <entry key="H4" value="0.436390212214495" />
+      <entry key="D1" value="26.677013541722527" />
+      <entry key="W1" value="63.57664937110972" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.318604426004523E-6" />
-      <entry key="MS500" value="0.09394759565576571" />
-      <entry key="S2" value="0.5623852814396142" />
-      <entry key="S5" value="1.0058805321512556" />
-      <entry key="S10" value="1.775842115524243" />
-      <entry key="S30" value="5.89201314637404" />
-      <entry key="S60" value="10.117666379732556" />
-      <entry key="M2" value="13.975291471010397" />
-      <entry key="M5" value="18.176854374320545" />
-      <entry key="M10" value="21.989674727084655" />
-      <entry key="M15" value="24.52227457230596" />
-      <entry key="M30" value="28.495867724169067" />
-      <entry key="H1" value="31.354768924566237" />
-      <entry key="H2" value="34.70079407618373" />
-      <entry key="H4" value="50.32112057976665" />
-      <entry key="D1" value="265.0361453949491" />
-      <entry key="W1" value="491.1110739468932" />
+      <entry key="MS100" value="0.8235910172675731" />
+      <entry key="MS500" value="0.9619274546647747" />
+      <entry key="S2" value="0.9903428719330246" />
+      <entry key="S5" value="0.9961258995541646" />
+      <entry key="S10" value="0.9980610700524115" />
+      <entry key="S30" value="0.9993532718503372" />
+      <entry key="S60" value="0.9996765836260931" />
+      <entry key="M2" value="0.9998382787361629" />
+      <entry key="M5" value="0.9999353083557424" />
+      <entry key="M10" value="0.9999676536547282" />
+      <entry key="M15" value="0.9999784356535631" />
+      <entry key="M30" value="0.9999892179731129" />
+      <entry key="H1" value="1.000090927436541" />
+      <entry key="H2" value="1.0688989596831244" />
+      <entry key="H4" value="3.3802378529693358" />
+      <entry key="D1" value="161.60086420718042" />
+      <entry key="W1" value="465.72522342520574" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -128,28 +141,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.RestaurantReservation.Db.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.RestaurantReservation.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.RestaurantReservation.Db">
+}</component>
+  <component name="RunManager" selected=".NET Project.RestaurantReservation">
     <configuration name="RestaurantReservation" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -201,7 +216,8 @@
       <option name="presentableId" value="Default" />
       <updated>1786865872497</updated>
       <workItem from="1786865874676" duration="446000" />
-      <workItem from="1786866342473" duration="25149000" />
+      <workItem from="1786866342473" duration="26396000" />
+      <workItem from="1787135277878" duration="8058000" />
     </task>
     <servers />
   </component>
