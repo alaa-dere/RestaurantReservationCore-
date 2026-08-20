@@ -196,3 +196,90 @@ static async Task TestOrderItemCrudAsync(RestaurantReservationDbContext context)
     var deleted = await operations.Delete(created.OrderItemId);
     Console.WriteLine(deleted ? "Order item deleted successfully." : "Order item delete failed.");
 }
+
+await TestListManagersAsync(context);
+static async Task TestListManagersAsync(RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Managers ");
+
+    var employeeOperations = new EmployeeOperations(context);
+    var managers = await employeeOperations.ListManagersAsync();
+
+    foreach (var manager in managers)
+    {
+        Console.WriteLine(
+            $"{manager.EmployeeId} - " +
+            $"{manager.FirstName} {manager.LastName} - " +
+            $"{manager.Position}"
+        );
+    }
+}
+
+await TestGetReservationsByCustomerAsync(context);
+static async Task TestGetReservationsByCustomerAsync(RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Reservations By Customer ");
+
+    var reservationOperations = new ReservationOperations(context);
+    var reservations = await reservationOperations.GetReservationsByCustomerAsync(1);
+
+    foreach (var reservation in reservations)
+    {
+        Console.WriteLine(
+            $"Reservation ID: {reservation.ReservationId}, " +
+            $"Date: {reservation.ReservationDate}, " +
+            $"Party Size: {reservation.PartySize}"
+        );
+    }
+}
+
+await TestListOrdersAndMenuItemsAsync(context);
+static async Task TestListOrdersAndMenuItemsAsync(RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Orders And Menu Items ");
+
+    var orderOperations = new OrderOperations(context);
+    var orders = await orderOperations.ListOrdersAndMenuItemsAsync(1);
+
+    foreach (var order in orders)
+    {
+        Console.WriteLine($"Order ID: {order.OrderId}, Total: {order.TotalAmount}");
+
+        foreach (var orderItem in order.OrderItems)
+        {
+            Console.WriteLine(
+                $"  Menu Item: {orderItem.MenuItem.Name}, " +
+                $"Quantity: {orderItem.Quantity}"
+            );
+        }
+    }
+}
+
+await TestListOrderedMenuItemsAsync(context);
+static async Task TestListOrderedMenuItemsAsync(RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Ordered Menu Items ");
+
+    var menuItemOperations = new MenuItemOperations(context);
+    var menuItems = await menuItemOperations.ListOrderedMenuItemsAsync(1);
+
+    foreach (var item in menuItems)
+    {
+        Console.WriteLine(
+            $"Item ID: {item.ItemId}, " +
+            $"Name: {item.Name}, " +
+            $"Price: {item.Price}"
+        );
+    }
+}
+
+await TestCalculateAverageOrderAmountAsync(context);
+static async Task TestCalculateAverageOrderAmountAsync(RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Average Order Amount ");
+
+    var orderOperations = new OrderOperations(context);
+    var average = await orderOperations.CalculateAverageOrderAmountAsync(1);
+
+    Console.WriteLine($"Average order amount for Employee 1: {average:F2}");
+}

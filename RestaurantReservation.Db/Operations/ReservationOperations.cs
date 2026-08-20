@@ -49,4 +49,11 @@ public class ReservationOperations
         await _context.SaveChangesAsync();
         return true;
     }
+    
+    public async Task<List<Reservations>> GetReservationsByCustomerAsync(int customerId)
+    {
+        return await _context.Reservations
+            .Where(r => r.CustomerId == customerId)
+            .ToListAsync();
+    }
 }

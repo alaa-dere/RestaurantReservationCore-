@@ -48,4 +48,13 @@ public class MenuItemOperations
         await _context.SaveChangesAsync();
         return true;
     }
+    
+    public async Task<List<MenuItems>> ListOrderedMenuItemsAsync(int reservationId)
+    {
+        return await _context.OrderItems
+            .Where(oi => oi.Order.ReservationId == reservationId)
+            .Select(oi => oi.MenuItem)
+            .Distinct()
+            .ToListAsync();
+    }
 }

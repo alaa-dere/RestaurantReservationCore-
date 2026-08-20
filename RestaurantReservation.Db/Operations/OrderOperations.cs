@@ -48,4 +48,23 @@ public class OrderOperations
         await _context.SaveChangesAsync();
         return true;
     }
+    
+    public async Task<List<Orders>> ListOrdersAndMenuItemsAsync(int reservationId)
+    {
+        return await _context.Orders
+            .Where(o => o.ReservationId == reservationId)
+            .Include(o => o.OrderItems)
+            .ThenInclude(oi => oi.MenuItem)
+            .ToListAsync();
+    }
+    
+    public async Task<decimal> CalculateAverageOrderAmountAsync(int employeeId)
+    {
+        var orders = _context.Orders.Where(o => o.EmployeeId == employeeId);
+
+        if (!await orders.AnyAsync())
+            return 0;
+
+        return await orders.AverageAsync(o => o.TotalAmount);
+    }
 }

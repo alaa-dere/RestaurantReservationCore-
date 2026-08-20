@@ -48,4 +48,11 @@ public class EmployeeOperations
         await _context.SaveChangesAsync();
         return true;
     }
+    
+    public async Task<List<Employees>> ListManagersAsync()
+    {
+        return await _context.Employees
+            .Where(e => e.Position == "Manager")
+            .ToListAsync();
+    }
 }
