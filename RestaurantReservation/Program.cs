@@ -16,6 +16,7 @@ await TestOrderCrudAsync(context);
 await TestOrderItemCrudAsync(context);
 await TestReservationDetailsViewAsync(context);
 await TestEmployeeRestaurantViewAsync(context);
+await TestRestaurantRevenueFunctionAsync(context);
 
 static async Task TestCustomerCrudAsync(RestaurantReservationDbContext context)
 {
@@ -320,4 +321,12 @@ static async Task TestEmployeeRestaurantViewAsync(RestaurantReservationDbContext
             $"Restaurant: {employee.RestaurantName}"
         );
     }
+}
+
+static async Task TestRestaurantRevenueFunctionAsync(RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Restaurant Total Revenue ");
+    var operations = new RestaurantOperations(context);
+    var revenue = await operations.GetTotalRevenueAsync(1);
+    Console.WriteLine($"Total revenue for Restaurant 1: {revenue:F2}");
 }

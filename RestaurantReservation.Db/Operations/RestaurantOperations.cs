@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.Models;
+using Microsoft.Data.SqlClient;
 
 namespace RestaurantReservation.Db.Operations;
 
@@ -47,5 +48,15 @@ public class RestaurantOperations
         _context.Restaurants.Remove(restaurant);
         await _context.SaveChangesAsync();
         return true;
+    }
+    
+    public async Task<decimal> GetTotalRevenueAsync(int restaurantId)
+    {
+        var restaurantIdParameter = new SqlParameter("@restaurantId", restaurantId);
+        var result = await _context.Database
+            .SqlQueryRaw<decimal>("SELECT dbo.CalculateRestaurantRevenue(@restaurantId) AS Value", restaurantIdParameter)
+            .SingleAsync();
+
+        return result;
     }
 }
