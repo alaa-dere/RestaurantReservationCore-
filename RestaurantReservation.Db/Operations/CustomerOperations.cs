@@ -1,3 +1,4 @@
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.Models;
 
@@ -47,5 +48,15 @@ public class CustomerOperations
         _context.Customers.Remove(customer);
         await _context.SaveChangesAsync();
         return true;
+    }
+    
+    public async Task<List<Customers>> GetCustomersByPartySizeAsync(int partySize)
+    {
+        var partySizeParameter = new SqlParameter("@PartySize", partySize);
+
+        return await _context.Customers
+            .FromSqlRaw("EXEC GetCustomersByPartySize @PartySize", partySizeParameter)
+            .AsNoTracking()
+            .ToListAsync();
     }
 }

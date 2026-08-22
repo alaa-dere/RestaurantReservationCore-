@@ -17,6 +17,7 @@ await TestOrderItemCrudAsync(context);
 await TestReservationDetailsViewAsync(context);
 await TestEmployeeRestaurantViewAsync(context);
 await TestRestaurantRevenueFunctionAsync(context);
+await TestCustomersByPartySizeStoredProcedureAsync(context);
 
 static async Task TestCustomerCrudAsync(RestaurantReservationDbContext context)
 {
@@ -329,4 +330,16 @@ static async Task TestRestaurantRevenueFunctionAsync(RestaurantReservationDbCont
     var operations = new RestaurantOperations(context);
     var revenue = await operations.GetTotalRevenueAsync(1);
     Console.WriteLine($"Total revenue for Restaurant 1: {revenue:F2}");
+}
+
+static async Task TestCustomersByPartySizeStoredProcedureAsync(RestaurantReservationDbContext context)
+{
+    Console.WriteLine("\n Customers With Large Reservations ");
+    var operations = new CustomerOperations(context);
+    var customers = await operations.GetCustomersByPartySizeAsync(3);
+
+    foreach (var customer in customers)
+    {
+        Console.WriteLine($"Customer: {customer.CustomerId} - " + $"{customer.FirstName} {customer.LastName}");
+    }
 }
